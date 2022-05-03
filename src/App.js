@@ -77,7 +77,7 @@ class App extends React.Component {
     const date = today.getFullYear().toString() + "-" + month.toString() + "-" + today.getDate().toString();
     
     const newCredit = {description, amount, date}
-    balance = balance - amount;
+    balance = balance + amount;
     credits = [...credits, newCredit]
     this.setState({credits: credits, accountBalance: balance})
   }
