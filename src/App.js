@@ -61,7 +61,7 @@ class App extends React.Component {
     this.setState({debits: debits, accountBalance: balance})
   }
 
-  addCreditit = (e) => {
+  addCredit = (e) => {
     //send to credits view via props
     //updates state based off user input
     e.preventDefault()
