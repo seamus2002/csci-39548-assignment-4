@@ -1,25 +1,25 @@
 import { Link } from 'react-router-dom';
 
-const Debits = (props) => {
-	let debitsView = () => {
-        const { debits } = props;
-        return debits.map((debit) => {
-            let date = debit.date.slice(0,10);
-            return <li key={debit.id}>{debit.amount} {debit.description} {date}</li>
+const Credits = (props) => {
+	let creditsView = () => {
+        const { credits } = props;
+        return credits.map((credit) => {
+            let date = credit.date.slice(0,10);
+            return <li key={credit.id}>{credit.amount} {credit.description} {date}</li>
         }) 
     }
     return (
     	<div>
-    	   <h1>Debits</h1>
-    	   {debitsView()}
-           <form onSubmit={props.addDebit}>
+    	   <h1>Credits</h1>
+    	   {creditsView()}
+           <form onSubmit={props.addCredit}>
              <input type="text" name="description" />
              <input type="number" name="amount" />
-             <button type="submit">Add Debit</button>
+             <button type="submit">Add Credit</button>
            </form>
            <Link to="/">Home</Link>
     	</div>
 
     )
 }
-export default Debits;
+export default Credits;
