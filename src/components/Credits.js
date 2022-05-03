@@ -18,6 +18,8 @@ const Credits = (props) => {
              <button type="submit">Add Credit</button>
            </form>
            <Link to="/">Home</Link>
+           <br />
+           <Link to="/debits">Debits</Link>
     	</div>
 
     )
